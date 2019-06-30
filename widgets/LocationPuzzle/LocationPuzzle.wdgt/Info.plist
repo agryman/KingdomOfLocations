@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Location Puzzle</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.dancewrite.widget.locationpuzzle</string>
+	<key>CFBundleName</key>
+	<string>locationpuzzle</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>Height</key>
+	<integer>550</integer>
+	<key>MainHTML</key>
+	<string>LocationPuzzle.svg</string>
+	<key>Width</key>
+	<integer>737</integer>
+	<key>IBNotifiesOnReady</key>
+	<false/>
+</dict>
+</plist>

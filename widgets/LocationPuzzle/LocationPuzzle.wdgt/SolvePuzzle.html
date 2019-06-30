@@ -1,0 +1,171 @@
+<!--  begin snippet -->
+<form action="">
+<script language-"JavaScript" type="text/javascript" src="/resources/KingdomOfLocations/scripts/SolvePuzzle.js"></script>
+<table align="center">
+	<tr>
+		<td align="center">
+
+			<img src="/resources/KingdomOfLocations/images/Clues.jpeg" width="412" height="258" usemap="#cluesmap" border="0">
+			<map id="cluesmap" name="cluesmap">
+	
+				<area name="Elephant-0" shape="rect" coords="11,26,69,73" onmouseover="showclue(0)" onmouseout="clearclue()" nohref="true"/>
+				<area name="Shark-1" shape="rect" coords="46,68,109,104" onmouseover="showclue(1)" onmouseout="clearclue()"/>
+				<area name="Ice-cream-cone-2" shape="rect" coords="61,196,85,244" onmouseover="showclue(2)" onmouseout="clearclue()"/>
+				<area name="Ice-cream-cone-3" shape="rect" coords="95,107,119,155" onmouseover="showclue(3)" onmouseout="clearclue()"/>
+				<area name="Guitar-4" shape="rect" coords="131,149,157,215" onmouseover="showclue(4)" onmouseout="clearclue()"/>
+				<area name="Telephone-5" shape="rect" coords="159,107,206,151" onmouseover="showclue(5)" onmouseout="clearclue()"/>
+				<area name="Telephone-6" shape="rect" coords="185,198,232,242" onmouseover="showclue(6)" onmouseout="clearclue()"/>
+
+				<area name="Guitar-7" shape="rect" coords="218,37,244,103" onmouseover="showclue(7)" onmouseout="clearclue()"/>
+				<area name="Rose-8" shape="rect" coords="253,169,285,215" onmouseover="showclue(8)" onmouseout="clearclue()"/>
+				<area name="Hammer-9" shape="rect" coords="262,20,291,72" onmouseover="showclue(9)" onmouseout="clearclue()"/>
+				<area name="Apple-10" shape="rect" coords="280,120,310,149" onmouseover="showclue(10)" onmouseout="clearclue()"/>
+				<area name="Xeros-machine-11" shape="rect" coords="328,205,389,244" onmouseover="showclue(11)" onmouseout="clearclue()"/>
+				<area name="Elephant-12" shape="rect" coords="334,27,392,74" onmouseover="showclue(12)" onmouseout="clearclue()"/>
+				<area name="Telephone-13" shape="rect" coords="359,109,408,152" onmouseover="showclue(13)" onmouseout="clearclue()"/>
+				
+			</map>
+		</td>
+
+	<tr>
+	<tr height="40">
+		<td align="center">
+			<span id="cluename">Tap on a picture to see its name and location sign.</span><img name="clueimage" src="/resources/KingdomOfLocations/images/blank.jpg">
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+
+		<div style="width: 400; border-style: double;">
+		<table width="100%" cellpadding="4">
+
+			<tr>
+				<td align="left"><img src="/resources/KingdomOfLocations/images/key.png" /></td>
+				<td align="center"><img src="/resources/KingdomOfLocations/images/crown.png" /></td>
+				<td align="right"><img src="/resources/KingdomOfLocations/images/key.png" /></td>
+			</tr>
+
+			<tr>
+
+				<td></td>
+				<td align="center">
+				<table>
+					<tr class="input-row">
+						<td><input id="letter-0" type="text" size="1" maxlength="1"
+							onchange="check(this, 'E')"></td>
+						<td><input id="letter-1" type="text" size="1" maxlength="1"
+							onchange="check(this, 'X')"></td>
+						<td><input id="letter-2" type="text" size="1" maxlength="1"
+							onchange="check(this, 'I')"></td>
+						<td><input id="letter-3" type="text" size="1" maxlength="1"
+							onchange="check(this, 'T')"></td>
+					</tr>
+
+					<tr class="symbol-row">
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/LeftWingRDS.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/RWingQuarterUS.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/LeftHalfC.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/RightWingLC.jpg" />
+					</tr>
+				</table>
+				</td>
+				<td></td>
+
+			</tr>
+
+			<tr>
+				<td align="left"><img src="/resources/KingdomOfLocations/images/crown.png" /></td>
+				<td align="center">
+				<table>
+					<tr>
+						<td><input id="letter-4" type="text" size="1" maxlength="1"
+							onchange="check(this, 'S')"></td>
+						<td><input id="letter-5" type="text" size="1" maxlength="1"
+							onchange="check(this, 'T')"></td>
+
+						<td><input id="letter-6" type="text" size="1" maxlength="1"
+							onchange="check(this, 'A')"></td>
+						<td><input id="letter-7" type="text" size="1" maxlength="1"
+							onchange="check(this, 'G')"></td>
+						<td><input id="letter-8" type="text" size="1" maxlength="1"
+							onchange="check(this, 'E')"></td>
+					</tr>
+					<tr class="symbol-row">
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/LWingQuarterRDS.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/BLCQandCC.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/RightHalfLC.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/LCentreQuarterLUS.jpg" />
+
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/BRWQandRWingDS.jpg" />
+					</tr>
+				</table>
+				</td>
+				<td align="right"><img src="/resources/KingdomOfLocations/images/crown.png" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+
+				<td align="center">
+				<table>
+
+					<tr>
+						<td><input id="letter-9" type="text" size="1" maxlength="1"
+							onchange="check(this, 'R')"></td>
+						<td><input id="letter-10" type="text" size="1" maxlength="1"
+							onchange="check(this, 'I')"></td>
+						<td><input id="letter-11" type="text" size="1" maxlength="1"
+							onchange="check(this, 'G')"></td>
+						<td><input id="letter-12" type="text" size="1" maxlength="1"
+							onchange="check(this, 'H')"></td>
+						<td><input id="letter-13" type="text" size="1" maxlength="1"
+							onchange="check(this, 'T')"></td>
+
+					</tr>
+					<tr class="symbol-row">
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/RCentreQuarterRUS.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/BLWQandLHUS.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/BCandRCQDS.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/BRCQandRHDS.jpg" />
+						<td align="center"><img
+							src="/resources/KingdomOfLocations/images/CentreUS.jpg" />
+					</tr>
+				</table>
+
+				</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td align="left"><img src="/resources/KingdomOfLocations/images/key.png" /></td>
+				<td align="center"><img src="/resources/KingdomOfLocations/images/crown.png" /></td>
+				<td align="right"><img src="/resources/KingdomOfLocations/images/key.png" /></td>
+			</tr>
+
+			
+		</table>
+		</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="center"><input type="reset" value="Reset!"></td>
+	</tr>
+	
+</table>
+</form>
+
+<!-- end snippet -->

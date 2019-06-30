@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<title>Solve the Kingdom of Location Puzzle</title>
+<link href="SolvePuzzle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="SolvePuzzle.js"></script>
+</head>
+
+<body>
+<div id="clues"><img src="Clues.jpeg" width="412" height="258"></div>
+
+<div style="width: 418; margin-left: auto; margin-right: auto;">
+<div id="puzzle-form" style="position: relative; width: 418; height: 456; background-image: url('Blank-Puzzle.png');">
+<form action="">
+
+<div style="position: absolute; width: 100%; top: 25%;">
+<table style="margin-left: auto; margin-right: auto;">
+	<tr class="input-row">
+		<td><input id="letter-0" type="text" size="1" maxlength="1" onchange="check(this, 'E')"></td>
+		<td><input id="letter-1" type="text" size="1" maxlength="1" onchange="check(this, 'X')"></td>
+		<td><input id="letter-2" type="text" size="1" maxlength="1" onchange="check(this, 'I')"></td>
+		<td><input id="letter-3" type="text" size="1" maxlength="1" onchange="check(this, 'T')"></td>
+	</tr>
+	<tr class="symbol-row">
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/LeftWingRDS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/RWingQuarterUS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/LeftHalfC.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/RightWingLC.jpg" />
+	</tr>
+</table>
+</div>
+
+<div style="position: absolute; width: 100%; top: 50%;">
+<table style="margin-left: auto; margin-right: auto;">
+	<tr>
+		<td><input id="letter-4" type="text" size="1" maxlength="1" onchange="check(this, 'S')"></td>
+		<td><input id="letter-5" type="text" size="1" maxlength="1" onchange="check(this, 'T')"></td>
+		<td><input id="letter-6" type="text" size="1" maxlength="1" onchange="check(this, 'A')"></td>
+		<td><input id="letter-7" type="text" size="1" maxlength="1" onchange="check(this, 'G')"></td>
+		<td><input id="letter-8" type="text" size="1" maxlength="1" onchange="check(this, 'E')"></td>
+	</tr>
+	<tr class="symbol-row">
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/LWingQuarterRDS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/BLCQandCC.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/RightHalfLC.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/LCentreQuarterLUS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/BRWQandRWingDS.jpg" />
+	</tr>
+</table>
+</div>
+
+<div style="position: absolute; width: 100%; top: 75%;">
+<table style="margin-left: auto; margin-right: auto;">
+
+	<tr>
+		<td><input id="letter-9" type="text" size="1" maxlength="1"  onchange="check(this, 'R')"></td>
+		<td><input id="letter-10" type="text" size="1" maxlength="1"  onchange="check(this, 'I')"></td>
+		<td><input id="letter-11" type="text" size="1" maxlength="1"  onchange="check(this, 'G')"></td>
+		<td><input id="letter-12" type="text" size="1" maxlength="1"  onchange="check(this, 'H')"></td>
+		<td><input id="letter-13" type="text" size="1" maxlength="1"  onchange="check(this, 'T')"></td>
+	</tr>
+	<tr class="symbol-row">
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/RCentreQuarterRUS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/BLWQandLHUS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/BCandRCQDS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/BRCQandRHDS.jpg" />
+		<td class="symbol-cell"><img src="../images/KingdomOfLocations/CentreUS.jpg" />
+	</tr>
+</table>
+</div>
+
+</form>
+</div>
+</div>
+
+</body>
+</html>
