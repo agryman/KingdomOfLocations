@@ -37,6 +37,8 @@ var clueimagenames = [
 	"blank"
 ];
 
+var blankClue = 14;
+
 var clueimages = new Array(15);
 
 for(var clue = 0; clue < clueimages.length; clue++) {
@@ -62,8 +64,8 @@ function showclue(clue) {
 
 function clearclue() {
 
-	writeText("Move the mouse over an item to get its name and location sign.");
-	setImage(14);
+	writeText("Tap an item to get its name and location sign.");
+	setImage(blankClue);
 
 }
 
@@ -103,6 +105,19 @@ function checkAnswer() {
 	}
 	
 	if(solved) {
-		alert("Congratulations! You solved the puzzle.");
+		writeText("Congratulations! You solved the puzzle.");
+		setImage(blankClue);
 	}
+}
+
+function resetPuzzle() {
+	for (var i = 0; i < answer.length; i++) {
+
+		var id = "letter-" + i;
+		var input = document.getElementById(id);
+		input.value = "";
+		input.style.color = "black"
+	}
+
+	clearclue();
 }
