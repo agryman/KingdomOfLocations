@@ -2,39 +2,39 @@
 var answer = "EXITSTAGERIGHT";
 
 var cluenames = [
-	"Elephant", 
-	"Shark", 
-	"Ice cream cone", 
-	"Ice cream cone", 
-	"Guitar",
-	"Telephone",
-	"Telephone",
-	"Guitar",
-	"Rose",
-	"Hammer",
-	"Apple",
-	"Xerox machine",
-	"Elephant",
-	"Telephone",
+	"Elephant",			// Elephant-0
+	"Shark", 			// Shark-1
+	"Ice cream cone", 	// Ice-cream-cone-2
+	"Ice cream cone", 	// Ice-cream-cone-3
+	"Guitar",			// Guitar-4
+	"Telephone",		// Telephone-5
+	"Telephone",		// Telephone-6
+	"Guitar",			// Guitar-7
+	"Rose",				// Rose-8
+	"Hammer",			// Hammer-9
+	"Apple",			// Apple-10
+	"Xerox machine",	// Xerox-machine-11
+	"Elephant",			// Elephant-12
+	"Telephone",		// Telephone-13
 	"blank"
 ];
 
 var clueimagenames = [
-	"LeftWingRDS",
-	"LWingQuarterRDS",
-	"BLWQandLHUS",
-	"LeftHalfC",
-	"LCentreQuarterLUS",
-	"BLCQandCC",
-	"CentreUS",
-	"BCandRCQDS",
-	"RCentreQuarterRUS",
-	"BRCQandRHDS",
-	"RightHalfLC",
-	"RWingQuarterUS",
-	"BRWQandRWingDS",
-	"RightWingLC",
-	"blank"
+	"LeftWingDS2R.svg", 			// "LeftWingRDS.jpg",
+	"LeftWingQuarterDS3.svg", 		// "LWingQuarterRDS.jpg",
+	"LWQ_LH_US2.svg",				// "BLWQandLHUS.jpg",
+	"LeftHalfMS.svg",				// "LeftHalfC.jpg",
+	"LeftCentreQuarterUS3L.svg",	// "LCentreQuarterLUS.jpg",
+	"LCQ_C_MS.svg",					// "BLCQandCC.jpg",
+	"CentreUS2.svg", 				// "CentreUS.jpg",
+	"RCQ_C_DS3.svg",				// "BCandRCQDS.jpg",
+	"RightCentreQuarterUS3R.svg",	// "RCentreQuarterRUS.jpg",
+	"RCQ_RH_DS2.svg",				// "BRCQandRHDS.jpg",
+	"RightHalfMSl.svg",				// "RightHalfLC.jpg",
+	"RightWingQuarterUS2.svg",		// "RWingQuarterUS.jpg",
+	"RWQ_RW_DS2.svg",				// "BRWQandRWingDS.jpg",
+	"RightWingMSL.svg",				// "RightWingLC.jpg",
+	"blank.jpg"
 ];
 
 var blankClue = 14;
@@ -44,7 +44,7 @@ var clueimages = new Array(15);
 for(var clue = 0; clue < clueimages.length; clue++) {
 	
 	clueimages[clue] = new Image();
-	clueimages[clue].src = "images/" + clueimagenames[clue] + ".jpg";
+	clueimages[clue].src = "images/" + clueimagenames[clue];
 }
 
 function writeText(txt) {
@@ -69,55 +69,6 @@ function clearclue() {
 
 }
 
-function check(input, solution) {
-
-	var entry = input.value;
-
-	// alert("You entered: " + entry + "\nThe solution is: " + solution);
-	
-	entry = entry.toUpperCase();
-	input.value = entry;
-	
-	var color = "";
-	if (entry == solution) {
-		color = "limegreen";
-	} else {
-		color = "red";
-	}
-	// input.setAttribute("class", classAttr);
-	input.style.color = color;
-	input.style.fontWeight = "bold";
-	
-	checkAnswer();
-}
-
-function checkAnswer() {
-	var solved = true;
-	for (var i = 0; i < answer.length; i++) {
-	
-		var letter = answer.charAt(i);
-		var id = "letter-" + i;
-		var input = document.getElementById(id);
-		var value = input.value;
-		value = value.toUpperCase();
-		solved = letter == value;
-		if (!solved) break;
-	}
-	
-	if(solved) {
-		writeText("Congratulations! You solved the puzzle.");
-		setImage(blankClue);
-	}
-}
-
 function resetPuzzle() {
-	for (var i = 0; i < answer.length; i++) {
-
-		var id = "letter-" + i;
-		var input = document.getElementById(id);
-		input.value = "";
-		input.style.color = "black"
-	}
-
 	clearclue();
 }

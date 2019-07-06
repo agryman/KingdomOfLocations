@@ -2,8 +2,7 @@
 <!-- saved from url=(0079)http://www.dancewrite.com/KingdomOfLocations//Page_20_files/widget1_markup.html -->
 <html>
 <head>
-	<script src="jquery-3.2.0.min.js"></script>
-	<script src="SolvePuzzle.js"></script>
+	<script src="jquery-3.2.0.js"></script>
 	<script src="locationpuzzle3.js"></script>
 </head>
 <body>
@@ -16,20 +15,20 @@
 			<img src="images/Clues.jpeg" width="412" height="258" usemap="#cluesmap" border="0">
 			<map id="cluesmap" name="cluesmap">
 	
-				<area name="Elephant-0" shape="rect" coords="11,26,69,73" onmouseover="showclue(0)" onmouseout="clearclue()" nohref="true">
-				<area name="Shark-1" shape="rect" coords="46,68,109,104" onmouseover="showclue(1)" onmouseout="clearclue()">
-				<area name="Ice-cream-cone-2" shape="rect" coords="61,196,85,244" onmouseover="showclue(2)" onmouseout="clearclue()">
-				<area name="Ice-cream-cone-3" shape="rect" coords="95,107,119,155" onmouseover="showclue(3)" onmouseout="clearclue()">
-				<area name="Guitar-4" shape="rect" coords="131,149,157,215" onmouseover="showclue(4)" onmouseout="clearclue()">
-				<area name="Telephone-5" shape="rect" coords="159,107,206,151" onmouseover="showclue(5)" onmouseout="clearclue()">
-				<area name="Telephone-6" shape="rect" coords="185,198,232,242" onmouseover="showclue(6)" onmouseout="clearclue()">
-				<area name="Guitar-7" shape="rect" coords="218,37,244,103" onmouseover="showclue(7)" onmouseout="clearclue()">
-				<area name="Rose-8" shape="rect" coords="253,169,285,215" onmouseover="showclue(8)" onmouseout="clearclue()">
-				<area name="Hammer-9" shape="rect" coords="262,20,291,72" onmouseover="showclue(9)" onmouseout="clearclue()">
-				<area name="Apple-10" shape="rect" coords="280,120,310,149" onmouseover="showclue(10)" onmouseout="clearclue()">
-				<area name="Xerox-machine-11" shape="rect" coords="328,205,389,244" onmouseover="showclue(11)" onmouseout="clearclue()">
-				<area name="Elephant-12" shape="rect" coords="334,27,392,74" onmouseover="showclue(12)" onmouseout="clearclue()">
-				<area name="Telephone-13" shape="rect" coords="359,109,408,152" onmouseover="showclue(13)" onmouseout="clearclue()">
+				<area class="location" id="location-1-1" name="Elephant-0" shape="rect" coords="11,26,69,73" onmouseover="showclue(0)" onmouseout="clearclue()" nohref="true">
+				<area class="location" id="location-2-2" name="Shark-1" shape="rect" coords="46,68,109,104" onmouseover="showclue(1)" onmouseout="clearclue()">
+				<area class="location" id="location-2-5" name="Ice-cream-cone-2" shape="rect" coords="61,196,85,244" onmouseover="showclue(2)" onmouseout="clearclue()">
+				<area class="location" id="location-3-3" name="Ice-cream-cone-3" shape="rect" coords="95,107,119,155" onmouseover="showclue(3)" onmouseout="clearclue()">
+				<area class="location" id="location-4-4" name="Guitar-4" shape="rect" coords="131,149,157,215" onmouseover="showclue(4)" onmouseout="clearclue()">
+				<area class="location" id="location-4-3" name="Telephone-5" shape="rect" coords="159,107,206,151" onmouseover="showclue(5)" onmouseout="clearclue()">
+				<area class="location" id="location-5-5" name="Telephone-6" shape="rect" coords="185,198,232,242" onmouseover="showclue(6)" onmouseout="clearclue()">
+				<area class="location" id="location-6-2" name="Guitar-7" shape="rect" coords="218,37,244,103" onmouseover="showclue(7)" onmouseout="clearclue()">
+				<area class="location" id="location-6-4" name="Rose-8" shape="rect" coords="253,169,285,215" onmouseover="showclue(8)" onmouseout="clearclue()">
+				<area class="location" id="location-7-1" name="Hammer-9" shape="rect" coords="262,20,291,72" onmouseover="showclue(9)" onmouseout="clearclue()">
+				<area class="location" id="location-7-3" name="Apple-10" shape="rect" coords="280,120,310,149" onmouseover="showclue(10)" onmouseout="clearclue()">
+				<area class="location" id="location-8-5" name="Xerox-machine-11" shape="rect" coords="328,205,389,244" onmouseover="showclue(11)" onmouseout="clearclue()">
+				<area class="location" id="location-8-1" name="Elephant-12" shape="rect" coords="334,27,392,74" onmouseover="showclue(12)" onmouseout="clearclue()">
+				<area class="location" id="location-9-3" name="Telephone-13" shape="rect" coords="359,109,408,152" onmouseover="showclue(13)" onmouseout="clearclue()">
 				
 			</map>
 		</td>
@@ -37,10 +36,10 @@
 	</tr>
 	<tr>
 	</tr>
-	<tr height="40">
+	<tr height="50">
 		<td align="center">
-			<span id="cluename">Tap an item to get its name and location sign.</span>
-            <img name="clueimage" src="images/blank.jpg">
+			<span id="cluename" style="vertical-align: middle">Tap an item to get its name and location sign.</span>
+            <img name="clueimage" src="images/blank.jpg" style="vertical-align: middle">
 		</td>
 	</tr>
 	<tr>
@@ -54,85 +53,6 @@
 				<td align="left"><img src="images/key.png"></td>
 				<td align="center"><img src="images/crown.png"></td>
 				<td align="right"><img src="images/key.png"></td>
-			</tr>
-
-			<tr>
-
-				<td></td>
-				<td align="center">
-				<table>
-					<tbody>
-					<tr class="input-row">
-						<td><input id="letter-0" type="text" size="1" maxlength="1" onchange="check(this, 'E')"></td>
-						<td><input id="letter-1" type="text" size="1" maxlength="1" onchange="check(this, 'X')"></td>
-						<td><input id="letter-2" type="text" size="1" maxlength="1" onchange="check(this, 'I')"></td>
-						<td><input id="letter-3" type="text" size="1" maxlength="1" onchange="check(this, 'T')"></td>
-					</tr>
-
-					<tr class="symbol-row">
-						<td align="center"><img src="images/LeftWingRDS.jpg"></td>
-						<td align="center"><img src="images/RWingQuarterUS.jpg"></td>
-						<td align="center"><img src="images/LeftHalfC.jpg"></td>
-						<td align="center"><img src="images/RightWingLC.jpg"></td>
-					</tr>
-				</tbody>
-				</table>
-				</td>
-				<td></td>
-
-			</tr>
-
-			<tr>
-				<td align="left"><img src="images/crown.png"></td>
-				<td align="center">
-				<table>
-					<tbody>
-					<tr>
-						<td><input id="letter-4" type="text" size="1" maxlength="1" onchange="check(this, 'S')"></td>
-						<td><input id="letter-5" type="text" size="1" maxlength="1" onchange="check(this, 'T')"></td>
-						<td><input id="letter-6" type="text" size="1" maxlength="1" onchange="check(this, 'A')"></td>
-						<td><input id="letter-7" type="text" size="1" maxlength="1" onchange="check(this, 'G')"></td>
-						<td><input id="letter-8" type="text" size="1" maxlength="1" onchange="check(this, 'E')"></td>
-					</tr>
-					<tr class="symbol-row">
-						<td align="center"><img src="images/LWingQuarterRDS.jpg"></td>
-						<td align="center"><img src="images/BLCQandCC.jpg"></td>
-						<td align="center"><img src="images/RightHalfLC.jpg"></td>
-						<td align="center"><img src="images/LCentreQuarterLUS.jpg"></td>
-						<td align="center"><img src="images/BRWQandRWingDS.jpg"></td>
-					</tr>
-					</tbody>
-				</table>
-				</td>
-				<td align="right"><img src="images/crown.png"></td>
-			</tr>
-
-			<tr>
-				<td></td>
-
-				<td align="center">
-				<table>
-
-					<tbody><tr>
-						<td><input id="letter-9" type="text" size="1" maxlength="1" onchange="check(this, 'R')"></td>
-						<td><input id="letter-10" type="text" size="1" maxlength="1" onchange="check(this, 'I')"></td>
-						<td><input id="letter-11" type="text" size="1" maxlength="1" onchange="check(this, 'G')"></td>
-						<td><input id="letter-12" type="text" size="1" maxlength="1" onchange="check(this, 'H')"></td>
-						<td><input id="letter-13" type="text" size="1" maxlength="1" onchange="check(this, 'T')"></td>
-
-					</tr>
-					<tr class="symbol-row">
-						<td align="center"><img src="images/RCentreQuarterRUS.jpg">
-						</td><td align="center"><img src="images/BLWQandLHUS.jpg">
-						</td><td align="center"><img src="images/BCandRCQDS.jpg">
-						</td><td align="center"><img src="images/BRCQandRHDS.jpg">
-						</td><td align="center"><img src="images/CentreUS.jpg"></td>
-					</tr>
-				</tbody>
-				</table>
-
-				</td>
-				<td></td>
 			</tr>
 
 			<tr>
@@ -167,205 +87,116 @@
 							</defs>
 
 							<defs>
+								<!-- EXIT -->
 
-								<!-- LeftWing -->
-								<g id="LeftWingDS2" transform="translate(-252.581,-1151.59)">
-									<line x1="238.945" y1="1078.938" x2="238.945" y2="1114.802"/>
-									<line x1="238.945" y1="1114.316" x2="266.217" y2="1151.59"/>
-									<line x1="225.69" y1="1088.347" x2="252.189" y2="1088.347"/>
+								<!-- <image id="LeftWingDS2R" xlink:href="images/LeftWingDS2R.svg"/> -->
+
+								<g id="LeftWingDS2R" transform="translate(-14)"> <!-- width="28px" height="47.333px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.732" y1="5.337" x2="7.732" y2="23.269"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.648" y1="23.026" x2="21.285" y2="41.663"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.438" y1="9.792" x2="14.688" y2="9.792"/>
 								</g>
 
-								<g id="LeftWingQuarterDS3" transform="translate(-1924.655,-1423.09)">
-									<path d="M1903.746,1351.272 c-4.545,40.908,19.275,69.318,41.818,71.818"/>
-									<line x1="1890.521" y1="1369.091" x2="1917.383" y2="1369.091"/>
+
+								<!-- <image id="RightWingQuarterUS2" xlink:href="images/RightWingQuarterUS2.svg"/> -->
+
+								<g id="RightWingQuarterUS2" transform="translate(-14)"> <!-- width="27.333px" height="41px" -->
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M24.02,2.227c2.272,20.454-9.639,34.66-20.91,35.91"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="19.367" y1="33.803" x2="5.867" y2="33.803"/>
 								</g>
 
-								<g id="LeftWingMS" transform="translate(-1826.265,-1152.15)">
-									<line x1="1812.796" y1="1079" x2="1812.796" y2="1114.863"/>
-									<line x1="1812.629" y1="1114.879" x2="1839.901" y2="1152.15"/>
-									<line x1="1800.374" y1="1115.408" x2="1826.374" y2="1115.408"/>
+								<!-- <image id="LeftHalfMS" xlink:href="images/LeftHalfMS.svg"/> -->
+
+								<g id="LeftHalfMS" transform="translate(-15)"> <!-- width="29.667px" height="43.333px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="4.677" y1="3.893" x2="25.132" y2="39.803"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="8.178" y1="21.886" x2="21.678" y2="21.886"/>
 								</g>
 
-								<g id="LeftWingUS2" transform="translate(-1142.828,-1424.661)">
-									<line x1="1142.912" y1="1352.344" x2="1142.912" y2="1388.208"/>
-									<line x1="1142.744" y1="1387.39" x2="1170.018" y2="1424.661"/>
-									<line x1="1149.822" y1="1415.419" x2="1176.322" y2="1415.419"/>
+								<!-- <image id="RightWingMSL" xlink:href="images/RightWingMSL.svg"/> -->
+
+								<g id="RightWingMSL" transform="translate(-15)"> <!-- width="30.333px" height="46px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="26.132" y1="5.227" x2="5.677" y2="41.137"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="16.213" y1="23.22" x2="8.714" y2="23.22"/>
 								</g>
 
-								<!-- LeftWingQuarter -->
-								<g id="LeftWingQuarterDS2" transform="translate(-1031.586,-1152.09)">
-									<path d="M1010.677,1080.272 c-4.545,40.908,19.275,69.318,41.818,71.818"/>
-									<line x1="997.313" y1="1089.091" x2="1023.813" y2="1089.091"/>
+								<!-- STAGE -->
+
+								<!-- <image id="LeftWingQuarterDS3" xlink:href="images/LeftWingQuarterDS3.svg"/> -->
+								<g id="LeftWingQuarterDS3" transform="translate(-18)"> <!-- width="36.333px" height="46.667px" -->
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M11.228,3.894c-2.272,20.455,9.638,34.66,20.909,35.91"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="4.616" y1="12.803" x2="18.046" y2="12.803"/>
 								</g>
 
-								<g id="LeftWingQuarterMS" transform="translate(-500.489,-1151.09)">
-									<path d="M479.58,1079.272 c-4.545,40.908,19.275,69.318,41.818,71.818"/>
-									<line x1="470.688" y1="1115.591" x2="496.716" y2="1115.591"/>
+								<!-- <image id="LCQ_C_MS" xlink:href="images/LCQ_C_MS.svg"/> -->
+
+								<g id="LCQ_C_MS" transform="translate(-18.5)"> <!-- width="37.333px" height="46.333px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="27.985" y1="23.061" x2="22.485" y2="23.061"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="30.545" y1="4.978" x2="30.545" y2="41.387"/>
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M21.575,41.304c0.743-20.5-7.007-34.25-18.159-35.91"/>
 								</g>
 
-								<g id="LeftWingQuarterUS3" transform="translate(-1058.986,-1423.09)">
-									<path d="M1038.077,1351.272 c-4.545,40.908,19.275,69.318,41.818,71.818"/>
-									<line x1="1038.964" y1="1405.091" x2="1064.964" y2="1405.091"/>
+								<!-- <image id="RightHalfMSl" xlink:href="images/RightHalfMSl.svg"/> -->
+
+								<g id="RightHalfMSl" transform="translate(-15)"> <!-- width="30.333px" height="46px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="26.132" y1="5.227" x2="5.677" y2="41.137"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="16.213" y1="23.22" x2="8.714" y2="23.22"/>
 								</g>
 
-								<g id="LeftWingQuarterUS2" transform="translate(-608.986,-1424.09)">
-									<path d="M588.077,1352.272 c-4.545,40.908,19.275,69.318,41.818,71.818"/>
-									<line x1="597.881" y1="1415.758" x2="624.381" y2="1415.758"/>
+								<!-- <image id="LeftCentreQuarterUS3L" xlink:href="images/LeftCentreQuarterUS3L.svg"/> -->
+
+								<g id="LeftCentreQuarterUS3L" transform="translate(-17.5)"> <!-- width="35.333px" height="45.667px" -->
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M27.483,41.137c2.272-20.455-9.638-34.66-20.909-35.91"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="27.845" y1="31.977" x2="20.665" y2="31.977"/>
 								</g>
 
-								<!-- LeftHalf -->
-								<g id="LeftHalfDS2" transform="translate(-790.8905,-1152.396)">
-									<line x1="770.436" y1="1080.578" x2="811.345" y2="1152.396"/>
-									<line x1="761.938" y1="1089.562" x2="789.104" y2="1089.562"/>
+								<!-- <image id="RWQ_RW_DS2" xlink:href="images/RWQ_RW_DS2.svg"/> -->
+
+								<g id="RWQ_RW_DS2" transform="translate(-22)"> <!-- width="44px" height="46.333px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="38.732" y1="5.004" x2="38.732" y2="22.936"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="38.815" y1="22.693" x2="25.18" y2="41.33"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="35.276" y1="9.458" x2="29.526" y2="9.458"/>
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M25.603,5.049c2.273,20.454-9.638,34.659-20.909,35.909"/>
 								</g>
 
-								<g id="LeftHalfDS3" transform="translate(-1507.981,-1424.417)">
-									<line x1="1487.526" y1="1352.599" x2="1528.436" y2="1424.417"/>
-									<line x1="1484.362" y1="1370.584" x2="1510.862" y2="1370.584"/>
+
+								<!-- RIGHT -->
+
+								<!-- <image id="RightCentreQuarterUS3R" xlink:href="images/RightCentreQuarterUS3R.svg"/> -->
+
+								<g id="RightCentreQuarterUS3R" transform="translate(-17)"> <!-- width="33.667px" height="47.333px" -->
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M7.603,40.803c-2.272-20.455,9.638-34.66,20.909-35.91"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="7.241" y1="31.643" x2="14.421" y2="31.643"/>
 								</g>
 
-								<g id="LeftHalfMS" transform="translate(-164.4365,-1424.445)">
-									<line x1="143.982" y1="1352.627" x2="184.891" y2="1424.445"/>
-									<line x1="150.984" y1="1388.612" x2="177.984" y2="1388.612"/>
+								<!-- <image id="LWQ_LH_US2" xlink:href="images/LWQ_LH_US2.svg"/> -->
+
+								<g id="LWQ_LH_US2" transform="translate(-20.5)"> <!-- width="41.333px" height="47px" -->
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M6.267,5.561c-2.272,20.455,9.638,34.66,20.909,35.91"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="24.169" y1="36.97" x2="29.669" y2="36.97"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="16.07" y1="5.561" x2="36.525" y2="41.47"/>
 								</g>
 
-								<g id="LeftHalfUS2" transform="translate(-586.3815,-1151.12)">
-									<line x1="565.927" y1="1079.302" x2="606.836" y2="1151.12"/>
-									<line x1="587.43" y1="1141.62" x2="614.43" y2="1141.62"/>
+								<!-- <image id="RCQ_C_DS3" xlink:href="images/RCQ_C_DS3.svg"/> -->
+
+								<g id="RCQ_C_DS3" transform="translate(-18.5)"> <!-- width="37px" height="46px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="10.393" y1="14.311" x2="15.893" y2="14.311"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="6.083" y1="4.978" x2="6.083" y2="41.387"/>
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M15.053,41.304c-0.743-20.5,7.007-34.25,18.159-35.91"/>
 								</g>
 
-								<g id="LeftHalfUS3" transform="translate(-1222.2405,-1150.227)">
-									<line x1="1201.786" y1="1078.408" x2="1242.695" y2="1150.227"/>
-									<line x1="1219.122" y1="1132.394" x2="1245.622" y2="1132.394"/>
+								<!-- <image id="RCQ_RH_DS2" xlink:href="images/RCQ_RH_DS2.svg"/> -->
+
+								<g id="RCQ_RH_DS2" transform="translate(-20)"> <!-- width="40px" height="45.333px" -->
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M5.734,40.428c-2.273-20.455,9.638-34.66,20.909-35.91"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="34.872" y1="4.269" x2="14.417" y2="40.178"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="28.455" y1="8.678" x2="22.705" y2="8.678"/>
 								</g>
 
-								<!-- LeftCentreQuarter -->
-								<g id="LeftCentreQuarterDS2" transform="translate(-1821.424,-1423.091)">
-									<path d="M1842.333,1423.091 c4.546-40.908-19.275-69.318-41.818-71.818"/>
-									<line x1="1833.196" y1="1360.272" x2="1806.696" y2="1360.272"/>
-								</g>
+								<!-- <image id="CentreUS2" xlink:href="images/CentreUS2.svg"/> -->
 
-								<g id="LeftCentreQuarterMS" transform="translate(-1122.223,-1151.091)">
-									<path d="M1143.132,1151.091 c4.546-40.908-19.275-69.318-41.818-71.818"/>
-									<line x1="1152.496" y1="1115.272" x2="1126.496" y2="1115.272"/>
-								</g>
-
-								<g id="LeftCentreQuarterUS2" transform="translate(-955.451,-1424.091)">
-									<path d="M976.36,1424.091 c4.545-40.908-19.275-69.318-41.818-71.818"/>
-									<line x1="990.181" y1="1414.772" x2="963.724" y2="1414.772"/>
-								</g>
-
-								<!-- Centre -->
-								<g id="CentreDS2" transform="translate(-460.285,-1424.758)">
-									<line x1="460.285" y1="1352.939" x2="460.285" y2="1424.758"/>
-									<line x1="447.333" y1="1361.758" x2="473.333" y2="1361.758"/>
-								</g>
-
-								<g id="CentreDS3" transform="translate(-405.118,-1150.091)">
-									<line x1="405.118" y1="1078.272" x2="405.118" y2="1150.091"/>
-									<line x1="392.333" y1="1096.258" x2="418.333" y2="1096.258"/>
-								</g>
-
-								<g id="CentreMS" transform="translate(-689.118,-1151.425)">
-									<line x1="689.118" y1="1079.606" x2="689.118" y2="1151.425"/>
-									<line x1="676.333" y1="1115.425" x2="702.333" y2="1115.425"/>
-								</g>
-
-								<g id="CentreUS3" transform="translate(-154.118,-1150.091)">
-									<line x1="154.118" y1="1078.272" x2="154.118" y2="1150.091"/>
-									<line x1="141.333" y1="1132.091" x2="167.333" y2="1132.091"/>
-								</g>
-
-								<g id="CentreUS2" transform="translate(-1910.951,-1150.091)">
-									<line x1="1910.951" y1="1078.272" x2="1910.951" y2="1150.091"/>
-									<line x1="1897.5" y1="1141.091" x2="1924.5" y2="1141.091"/>
-								</g>
-
-								<!-- RightCentreQuarter -->
-								<g id="RightCentreQuarterDS2" transform="translate(-2011.652,-1152.091)">
-									<path d="M1990.743,1152.091 c-4.546-40.908,19.275-69.318,41.818-71.818"/>
-									<line x1="2000.88" y1="1088.772" x2="2027.88" y2="1088.772"/>
-								</g>
-
-								<g id="RightCentreQuarterMS" transform="translate(-1474.905,-1151.091)">
-									<path d="M1453.996,1151.091 c-4.545-40.908,19.275-69.318,41.818-71.818"/>
-									<line x1="1445.271" y1="1114.772" x2="1472.133" y2="1114.772"/>
-								</g>
-
-								<g id="RightCentreQuarterUS2" transform="translate(-1412.405,-1424.091)">
-									<path d="M1391.496,1424.091 c-4.545-40.908,19.275-69.318,41.818-71.818"/>
-									<line x1="1377.771" y1="1414.605" x2="1404.633" y2="1414.605"/>
-								</g>
-
-								<!-- RightHalf -->
-								<g id="RightHalfDS3" transform="translate(-1371.986,-1151.091)">
-									<line x1="1392.441" y1="1079.272" x2="1351.531" y2="1151.091"/>
-									<line x1="1396.605" y1="1097.091" x2="1369.605" y2="1097.091"/>
-								</g>
-
-								<g id="RightHalfDS2" transform="translate(-51.202,-1152.091)">
-									<line x1="71.658" y1="1080.272" x2="30.749" y2="1152.091"/>
-									<line x1="80.25" y1="1089.091" x2="53.489" y2="1089.091"/>
-								</g>
-
-								<g id="RightHalfMS" transform="translate(-361.5715,-1424.757)">
-									<line x1="382.026" y1="1352.938" x2="341.117" y2="1424.757"/>
-									<line x1="375.023" y1="1388.424" x2="348.523" y2="1388.424"/>
-								</g>
-
-								<g id="RightHalfUS3" transform="translate(-1614.941,-1422.091)">
-									<line x1="1635.396" y1="1350.272" x2="1594.486" y2="1422.091"/>
-									<line x1="1618.56" y1="1404.258" x2="1592.56" y2="1404.258"/>
-								</g>
-
-								<g id="RightHalfUS2" transform="translate(-809.3785,-1424.091)">
-									<line x1="829.833" y1="1352.272" x2="788.924" y2="1424.091"/>
-									<line x1="807.497" y1="1415.258" x2="781.497" y2="1415.258"/>
-								</g>
-
-								<!-- RightWingQuarter -->
-								<g id="RightWingQuarterDS2" transform="translate(-257.534,-1424.09)">
-									<path d="M278.443,1352.272 c4.546,40.908-19.275,69.318-41.818,71.818"/>
-									<line x1="292.431" y1="1361.758" x2="265.974" y2="1361.758"/>
-								</g>
-
-								<g id="RightWingQuarterDS3" transform="translate(-1250.201,-1424.09)">
-									<path d="M1271.11,1352.272 c4.546,40.908-19.275,69.318-41.818,71.818"/>
-									<line x1="1284.431" y1="1370.091" x2="1257.974" y2="1370.091"/>
-								</g>
-
-								<g id="RightWingQuarterMS" transform="translate(-1722.784,-1151.09)">
-									<path d="M1743.693,1079.272 c4.545,40.908-19.275,69.318-41.818,71.818"/>
-									<line x1="1752.848" y1="1115.258" x2="1726.557" y2="1115.258"/>
-								</g>
-
-								<g id="RightWingQuarterUS3" transform="translate(-2113.424,-1150.09)">
-									<path d="M2134.333,1078.272 c4.546,40.908-19.275,69.318-41.818,71.818"/>
-									<line x1="2133.196" y1="1131.591" x2="2110.196" y2="1131.591"/>
-								</g>
-
-								<g id="RightWingQuarterUS2" transform="translate(-1719.424,-1423.09)">
-									<path d="M1740.333,1351.272 c4.546,40.908-19.275,69.318-41.818,71.818"/>
-									<line x1="1731.029" y1="1414.424" x2="1704.029" y2="1414.424"/>
-								</g>
-
-								<!-- RightWing -->
-								<g id="RightWingDS2" transform="translate(-1621.053,-1151.91)">
-									<line x1="1634.356" y1="1079.426" x2="1634.356" y2="1115.289"/>
-									<line x1="1634.689" y1="1114.638" x2="1607.417" y2="1151.91"/>
-									<line x1="1647.584" y1="1088.834" x2="1620.945" y2="1088.834"/>
-								</g>
-
-								<g id="RightWingMS" transform="translate(-707.0535,-1424.909)">
-									<line x1="720.19" y1="1352.425" x2="720.19" y2="1388.289"/>
-									<line x1="720.69" y1="1387.637" x2="693.417" y2="1424.909"/>
-									<line x1="732.917" y1="1388.334" x2="706.445" y2="1388.334"/>
-								</g>
-
-								<g id="RightWingUS2" transform="translate(-883.4885,-1151.16)">
-									<line x1="896.958" y1="1078.508" x2="896.958" y2="1114.372"/>
-									<line x1="897.125" y1="1113.887" x2="869.852" y2="1151.16"/>
-									<line x1="890.213" y1="1142.084" x2="862.597" y2="1142.084"/>
+								<g id="CentreUS2" transform="translate(-10.5)"> <!-- width="20.667px" height="44px" -->
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="10.643" y1="4.227" x2="10.643" y2="40.136"/>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="3.917" y1="35.636" x2="17.417" y2="35.636"/>
 								</g>
 
 							</defs>
@@ -385,11 +216,11 @@
 											<text class="answer" id="answer-3" transform="translate(200)">I</text>
 											<text class="answer" id="answer-4" transform="translate(300)">T</text>
 											<g fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10"
-											   transform="translate(0,117)">
-												<use id="sign-1" xlink:href="#RightHalfDS2" transform="translate(0)"/>
-												<use id="sign-2" xlink:href="#CentreUS3" transform="translate(100)"/>
-												<use id="sign-3" xlink:href="#LeftWingDS2" transform="translate(200)"/>
-												<use id="sign-4" xlink:href="#CentreDS3" transform="translate(300)"/>
+											   transform="translate(0,30)">
+												<use id="sign-1" xlink:href="#LeftWingDS2R" transform="translate(0)scale(2)"/>
+												<use id="sign-2" xlink:href="#RightWingQuarterUS2" transform="translate(100)scale(2)"/>
+												<use id="sign-3" xlink:href="#LeftHalfMS" transform="translate(200)scale(2)"/>
+												<use id="sign-4" xlink:href="#RightWingMSL" transform="translate(300)scale(2)"/>
 											</g>
 										</g>
 									</g>
@@ -412,12 +243,12 @@
 											<text class="answer" id="answer-8" transform="translate(300)">G</text>
 											<text class="answer" id="answer-9" transform="translate(400)">E</text>
 											<g fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10"
-											   transform="translate(0,117)">
-												<use id="sign-5" xlink:href="#LeftWingQuarterMS" transform="translate(0)"/>
-												<use id="sign-6" xlink:href="#LeftHalfUS2" transform="translate(100)"/>
-												<use id="sign-7" xlink:href="#CentreMS" transform="translate(200)"/>
-												<use id="sign-8" xlink:href="#LeftHalfDS2" transform="translate(300)"/>
-												<use id="sign-9" xlink:href="#RightWingUS2" transform="translate(400)"/>
+											   transform="translate(0,30)">
+												<use id="sign-5" xlink:href="#LeftWingQuarterDS3" transform="translate(0)scale(2)"/>
+												<use id="sign-6" xlink:href="#LCQ_C_MS" transform="translate(100)scale(2)"/>
+												<use id="sign-7" xlink:href="#RightHalfMSl" transform="translate(200)scale(2)"/>
+												<use id="sign-8" xlink:href="#LeftCentreQuarterUS3L" transform="translate(300)scale(2)"/>
+												<use id="sign-9" xlink:href="#RWQ_RW_DS2" transform="translate(400)scale(2)"/>
 											</g>
 										</g>
 									</g>
@@ -441,12 +272,12 @@
 											<text class="answer" id="answer-13" transform="translate(300)">H</text>
 											<text class="answer" id="answer-14" transform="translate(400)">T</text>
 											<g fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10"
-											   transform="translate(0,117)">
-												<use id="sign-10" xlink:href="#LeftWingQuarterDS2" transform="translate(0)"/>
-												<use id="sign-11" xlink:href="#LeftCentreQuarterMS" transform="translate(100)"/>
-												<use id="sign-12" xlink:href="#LeftHalfUS3" transform="translate(200)"/>
-												<use id="sign-13" xlink:href="#RightHalfDS3" transform="translate(300)"/>
-												<use id="sign-14" xlink:href="#RightCentreQuarterMS" transform="translate(400)"/>
+											   transform="translate(0,30)">
+												<use id="sign-10" xlink:href="#RightCentreQuarterUS3R" transform="translate(0)scale(2)"/>
+												<use id="sign-11" xlink:href="#LWQ_LH_US2" transform="translate(100)scale(2)"/>
+												<use id="sign-12" xlink:href="#RCQ_C_DS3" transform="translate(200)scale(2)"/>
+												<use id="sign-13" xlink:href="#RCQ_RH_DS2" transform="translate(300)scale(2)"/>
+												<use id="sign-14" xlink:href="#CentreUS2" transform="translate(400)scale(2)"/>
 											</g>
 										</g>
 									</g>
@@ -472,7 +303,7 @@
 	</tr>
 	
 	<tr>
-		<td align="center"><input type="button" value="Reset!" onclick="resetPuzzle()"></td>
+		<td align="center"><input id="start-over-button" type="button" value="Reset!"></td>
 	</tr>
 	
 </tbody>
