@@ -94,14 +94,14 @@ var clues = [
 // the stage plan is an image map
 // each area of the image map has an image
 // the first letter of the area name is the corresponding letter of the secret message
+/*
 var area_names = [
-    "Elephant-0", "Xerox-machine-11", "Ice-cream-cone-3", "Telephone-13",  // EXIT
-    "Shark-1", "Telephone-5", "Apple-10", "Guitar-4", "Elephant-12", // STAGE
-    "Rose-8", "Ice-cream-cone-2", "Guitar-7", "Hammer-9", "Telephone-6"// RIGHT
+    "Elephant-0", "Xerox-machine-11", "Ice-cream-cone-3", "Telephone-13",   // EXIT
+    "Shark-1", "Telephone-5", "Apple-10", "Guitar-4", "Elephant-12",        // STAGE
+    "Rose-8", "Ice-cream-cone-2", "Guitar-7", "Hammer-9", "Telephone-6"     // RIGHT
 ];
+*/
 
-
-var answer = "EXITSTAGERIGHT";
 
 var cluenames = [
     "Elephant",			// Elephant-0
@@ -143,6 +143,9 @@ var blankClue = 14;
 
 var clueimages = new Array(15);
 
+var unsolved_message = "Tap an item to get its name and location sign.";
+var solved_message = "Congratulations, you've solved the puzzle!"
+
 for(var clue = 0; clue < clueimages.length; clue++) {
 
     clueimages[clue] = new Image();
@@ -160,20 +163,23 @@ function setImage(clue) {
 
 function showclue(clue) {
 
-    writeText("The " + cluenames[clue] + " is at location ");
-    setImage(clue);
+    if(isPuzzleSolved()) {
+
+    } else {
+        writeText("The " + cluenames[clue] + " is at location ");
+        setImage(clue);
+    }
 }
 
 function clearclue() {
 
-    writeText("Tap an item to get its name and location sign.");
+    var message = isPuzzleSolved() ? solved_message : unsolved_message;
+    writeText(message);
     setImage(blankClue);
 
 }
 
-function resetPuzzle() {
-    clearclue();
-}// the secret message
+// the secret message
 var secret_message = "EXITSTAGERIGHT";
 
 // This function is NOT used in the Location Puzzle.
@@ -181,7 +187,7 @@ function checkPuzzle() {
 
     // compare secret message to clues
 
-    if (secret_message.length != clues.length) {
+    if (secret_message.length !== clues.length) {
         alert("Puzzle Definition Error: secret message length " + secret_message.length +
             " differs from clues length " + clues.length);
     }
@@ -199,7 +205,7 @@ function checkPuzzle() {
         var locationName = $(locationSelector).attr("name");
         var locationLetter = (locationName && locationName.length > 0) ? locationName[0] : "?";
 
-        if (locationLetter != messageLetter) {
+        if (locationLetter !== messageLetter) {
             alert("Puzzle Definition Error: secret_message[" + i + "] = " + messageLetter +
                 " differs from text at " + locationSelector + " = " + locationLetter);
         }
@@ -252,8 +258,6 @@ function restartGameState() {
 
     saveGameState();
     displayGameState();
-
-    resetPuzzle();
 }
 
 function displayGameState() {
@@ -266,10 +270,7 @@ function displayGameState() {
 
 function displayStatus() {
 
-    var status = isPuzzleSolved() ? "Congratulations, you've solved the puzzle!" : "";
-    // $("#status").text(status);
-    writeText(status);
-    setImage(blankClue);
+    clearclue();
 }
 
 function displayAnswerCellByNumber(n) {
