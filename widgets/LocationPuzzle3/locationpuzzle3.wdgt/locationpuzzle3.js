@@ -144,7 +144,7 @@ var blankClue = 14;
 var clueimages = new Array(15);
 
 var unsolved_message = "Tap an item to get its name and location sign.";
-var solved_message = "Congratulations, you've solved the puzzle!"
+var solved_message = "Congratulations, you've solved the puzzle!";
 
 for(var clue = 0; clue < clueimages.length; clue++) {
 
@@ -203,7 +203,7 @@ function checkPuzzle() {
 
         // var locationLetter = $(locationSelector).text();
         var locationName = $(locationSelector).attr("name");
-        var locationLetter = (locationName && locationName.length > 0) ? locationName[0] : "?";
+        var locationLetter = locationName && locationName.length > 0 ? locationName[0] : "?";
 
         if (locationLetter !== messageLetter) {
             alert("Puzzle Definition Error: secret_message[" + i + "] = " + messageLetter +
@@ -276,7 +276,7 @@ function displayStatus() {
 function displayAnswerCellByNumber(n) {
 
     displayAnswerByNumber(n);
-    highlightCellByNumber(n, n == focusCellNumber);
+    highlightCellByNumber(n, n === focusCellNumber);
 }
 
 function displayAnswerByNumber(n) {
@@ -287,7 +287,7 @@ function displayAnswerByNumber(n) {
     var answerFill;
 
     var cr = clicks[i];
-    if (cr == 0) {
+    if (cr === 0) {
 
         answerText = "?";
         answerFill = "grey";
@@ -295,8 +295,7 @@ function displayAnswerByNumber(n) {
     } else {
 
         var locationSelector = "#" + locationNumberToId(cr);
-        // answerText = $(locationSelector).text();
-        locationName = $(locationSelector).attr("name");
+        var locationName = $(locationSelector).attr("name");
         answerText = locationName[0];
         answerFill = isCellNumberSolved(n) ? "green" : "red";
     }
@@ -309,7 +308,7 @@ function displayAnswerByNumber(n) {
 function isCellNumberSolved(n) {
 
     var i = n - 1;
-    return clues[i] == clicks[i];
+    return clues[i] === clicks[i];
 }
 
 /*
@@ -328,7 +327,7 @@ function nextFocusNumber() {
 }
 
 function isPuzzleSolved() {
-    return nextFocusNumber() == 0;
+    return nextFocusNumber() === 0;
 }
 
 function highlightCellById(id, state) {
@@ -378,15 +377,18 @@ function cellNumberToId(n) {
     return numberToId(cellIdPrefix, n);
 }
 
+/*
 function cellNumberFromLocationId(id) {
     return cellNumberFromLocationNumber(locationNumberFromId(id));
 }
+*/
 
+/*
 function cellNumberFromLocationNumber(cr) {
 
     // search the clues array for cr
     for (var i = 0; i < clues.length; i++) {
-        if (clues[i] == cr) {
+        if (clues[i] === cr) {
             return i + 1;
         }
     }
@@ -395,6 +397,7 @@ function cellNumberFromLocationNumber(cr) {
 
     return 0;
 }
+*/
 
 // locations ids are like "location-9-5"
 
@@ -436,7 +439,7 @@ function changeFocusCellByNumber(cellNumber) {
     if(isCellNumberSolved(cellNumber)) return;
 
     // the clicked cell already has the focus so do nothing
-    if (cellNumber == focusCellNumber) return;
+    if (cellNumber === focusCellNumber) return;
 
     // change the focus
 
@@ -453,6 +456,7 @@ function changeFocusCellById(cellId) {
 
 $(function(){
 
+    // check that the puzzle definition is consistent
     checkPuzzle();
 
     // load the current game state from local storage
@@ -477,10 +481,9 @@ $(function(){
         if (isPuzzleSolved()) return;
 
         var locationId = event.target.id;
-        var cr = locationNumberFromId(locationId);
 
         // save the click and update the answer
-        clicks[focusCellNumber - 1] = cr;
+        clicks[focusCellNumber - 1] = locationNumberFromId(locationId);
         displayAnswerByNumber(focusCellNumber);
 
         if (isCellNumberSolved(focusCellNumber)) {
@@ -488,7 +491,7 @@ $(function(){
             // the current cell is solved to move the focus
             highlightCellByNumber(focusCellNumber, false);
             focusCellNumber = nextFocusNumber();
-            if (focusCellNumber != 0) {
+            if (focusCellNumber !== 0) {
 
                 // highlight the new focus cell
                 highlightCellByNumber(focusCellNumber, true);
