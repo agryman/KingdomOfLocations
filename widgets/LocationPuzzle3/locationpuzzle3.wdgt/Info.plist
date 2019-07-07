@@ -15,11 +15,11 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>Height</key>
-	<integer>728</integer>
+	<integer>872</integer>
 	<key>MainHTML</key>
 	<string>locationpuzzle3.html</string>
 	<key>Width</key>
-	<integer>500</integer>
+	<integer>556</integer>
 	<key>IBNotifiesOnReady</key>
 	<false/>
 </dict>
