@@ -1,0 +1,8 @@
+#start-over-button {
+    color: red;
+    background: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: normal;
+}
